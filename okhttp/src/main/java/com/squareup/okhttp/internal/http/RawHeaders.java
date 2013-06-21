@@ -371,7 +371,7 @@ public final class RawHeaders {
     Set<String> names = new HashSet<String>();
     List<String> result = new ArrayList<String>();
     for (int i = 0; i < namesAndValues.size(); i += 2) {
-      String name = namesAndValues.get(i).toLowerCase(Locale.US);
+      String name = namesAndValues.get(i);
       String value = namesAndValues.get(i + 1);
 
       // Drop headers that are forbidden when layering HTTP over SPDY.
